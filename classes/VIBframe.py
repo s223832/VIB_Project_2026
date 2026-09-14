@@ -58,7 +58,7 @@ class VIBframe():
     # Functions
     # Build the system mass matrix, M
     def buildM(self):
-        self.M = buildM(self.X, self.C, self.mprop, self.nno, self.nne, self.ldof, self.TP)
+        self.M = buildM(self.X, self.C, self.mprop, self.nno, self.nne, self.ldof)
 
     # Build the system stiffness matrix, K
     def buildK(self):
