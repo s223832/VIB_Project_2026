@@ -18,7 +18,6 @@ The model is restrained to pure bending in the x-y plane:
 import numpy as np
 from math import pi, sqrt
 
-from functions.plot.plotconnectivity import plotconnectivity
 from functions.plot.plotmodeshapes import plotmodeshapes
 from functions.data.basestore import basestore
 from functions.data.output import output
@@ -29,7 +28,7 @@ from classes.VIBdata import VIBdata
 
 # 1. Beam geometry and mesh
 L = 10.0          # beam length [m]
-n_elem = 10        # number of elements
+n_elem = 10       # number of elements
 n_node = n_elem + 1
  
 X = np.array([[x, 0.0, 0.0] for x in np.linspace(0, L, n_node)])
@@ -92,5 +91,5 @@ for i in range(n_modes):
     print(f"{i+1:>5} {num:>20.4f} {ana:>20.4f} {err:>12.3f}")
 
 # 7. Plot mode shapes
-for i in range(0, 9):
+for i in range(0, 5):
     plotmodeshapes(data_vib, mode=i, scale=0.5)
